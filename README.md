@@ -14,9 +14,7 @@ Heuristic Analysis: Detects potential port-scanning behavior by monitoring sourc
 
 🛠️ Tech Stack
 Language: Python 3.x
-
 Libraries: Scapy, Socket, Threading
-
 Environment: Windows (Compatible with Npcap)
 
 📖 How It Works
@@ -28,17 +26,13 @@ Analysis Phase: Each packet is "peeled" through its layers (IP -> TCP -> Raw). I
 
 💻 Installation & Usage
 Clone the repository:
-
 Bash
 git clone https://github.com/yourusername/insightscan.git
 Install dependencies:
-
 Bash
 pip install scapy
 Note: Ensure Npcap is installed for Windows packet capturing.
-
 Run the tool:
-
 Bash
 python insightscan.py
 Pro-Tips for your GitHub:
@@ -50,12 +44,12 @@ License: Add a simple "MIT License" file so it looks like a real open-source pro
 
 1. Successful Network Browsing (Normal Traffic)
 When the system detects standard web traffic or a safe connection, it logs the activity without triggering alerts.
-
-Bash
 [*] Monitoring Network...
 [+] Connection established: 192.168.1.15 -> 93.184.216.34:443 (HTTPS)
 [+] Packet captured: [TCP] Source: 192.168.1.15 | Destination: 8.8.8.8 | Size: 64 bytes
 [+] Status: Successfully Browsing - No threats detected.
+
+
 2. ⚠️ WARNING: Malicious Activity Detected
 If a keyword like "exploit" or "attack" is found in the packet payload, or if a port scan is detected, the system triggers a high-priority warning.
 
